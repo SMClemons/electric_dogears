@@ -1,11 +1,14 @@
 ElectricDogears::Application.routes.draw do
-  get "bookmarks/index"
+  
+  resources :bookmarks, :only => [:index, :new, :create, :show]
+  
+  #get "bookmarks/index"
 
-  get "bookmarks/show"
+  #get "bookmarks/show"
 
-  get "bookmarks/new"
+  #get "bookmarks/new"
 
-  get "bookmarks/create"
+  #get "bookmarks/create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
